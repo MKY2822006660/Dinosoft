@@ -56,7 +56,7 @@ input[type=text]:focus, input[type=password]:focus {
   padding: 16px 20px;
   border: none;
   cursor: pointer;
-  width: 100%;
+  width: 50%;
   opacity: 0.9;
 }
 
@@ -68,18 +68,23 @@ input[type=text]:focus, input[type=password]:focus {
 <body>
 
 <h2>Tell us abut you first, before yo go</h2>
+<h1>Welcome.....</h1>
 <center><div class="bg-img">
   <form action="/action_page.php" class="container">
-    <h1>Login</h1>
+    <h1>Login or Sign up</h1>
 
-    < form="email"><b>Email</b></label>
+    <label for="Name"><b>Name</b></label>
+    <input type="text" placeholder="First Name" name="Name" required>
+
+    <label for="email"><b>Email</b></label>
     <input type="text" placeholder="Enter Email" name="email" required>
-    
 
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" required>
 
-    <button type="submit" class="btn">Login or Sign up</button>
+     <button onclick="window.location.href="https://loader-6956031.codehs.me/index.html">
+                          Login or Sign up                   
+
   </form></center>
 </center>  
 </div>
