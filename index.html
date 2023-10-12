@@ -1,180 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <head>
-
-  <link rel="icon" type="image/x-icon" href="https://i.ibb.co/VmZLnr1/icon-12.jpg">
-  
-</head>
-    <title>Sign Up</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title>
     <style>
-        * {
+        body {
+            background: #000; /* Change background color to black */
             margin: 0;
             padding: 0;
         }
 
-        html {
-            width: 100vw;
-            height: 100vh;
-        }
-
-        body {
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: top;
-            background-image: url(https://th.bing.com/th/id/OIP.RlM10r9JQv4PHFlh5dLqpgHaEK?pid=ImgDet&rs=1);
-            width: 100%;
-            height: 100%;
-            font-family: Arial, Helvetica;
-            letter-spacing: 0.02em;
-            font-weight: 400;
-            -webkit-font-smoothing: antialiased;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-
-        .blurred-box {
-            width: 370px; /* Adjusted width to be 50px wider */
-            height: 470px; /* Adjusted height to be 50px longer */
-            background: inherit;
-            border-radius: 2px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .blurred-box:after {
-            content: '';
-            width: 420px; /* Adjusted to match the new width of the .blurred-box */
-            height: 520px; /* Adjusted to match the new height of the .blurred-box */
-            position: absolute;
-            left: -25px;
-            top: -25px;
-            box-shadow: inset 0 0 0 200px rgba(255, 255, 255, 0.1);
-            filter: blur(15px);
-        }
-
-        .user-icon {
-            width: 100px;
+        .container {
+            width: 80px;
             height: 100px;
-            border-radius: 50%;
-            background-size: cover;
-            background-image: url("https://i.ibb.co/YL40yZ3/download-3.jpg");
-            position: absolute;
-            top: 50px;
-            left: 130px;
+            margin: 100px auto;
+            margin-top: calc(50vh - 50px);
         }
 
-        .user-login-box {
-            text-align: center;
-            z-index: 1;
+        .block {
             position: relative;
-            margin-top: 160px;
-        }
-
-        /* Additional styles for the first name and last name fields */
-        input.user-firstname,
-        input.user-lastname {
-            width: 100%;
-            height: 18px;
-            opacity: 0.4;
-            border-radius: 2px;
-            padding: 10px 15px;
-            border: 0;
-            margin-bottom: 10px;
-        }
-
-        input.user-email,
-        input.user-password {
-            width: 100%;
-            height: 18px;
-            opacity: 0.4;
-            border-radius: 2px;
-            padding: 10px 15px;
-            border: 0;
-            margin-bottom: 10px;
-        }
-
-        /* Show Password Button */
-        .show-password-button {
-            background-color: #fff;
-            color: #000;
-            border: none;
+            box-sizing: border-box;
+            float: left;
+            margin: 0 10px 10px 0;
+            width: 12px;
+            height: 12px;
             border-radius: 3px;
-            padding: 10px 15px;
-            cursor: pointer;
+            background: #FFF;
         }
 
-        /* "Log In" Button */
-        .login-button {
-            background-color: #fff;
-            color: #000;
-            border: none;
-            border-radius: 3px;
-            padding: 10px 15px;
-            cursor: pointer;
-        }
+        .block:nth-child(4n+1) { animation: wave 2s ease 0s infinite; }
+        .block:nth-child(4n+2) { animation: wave 2s ease 0.2s infinite; }
+        .block:nth-child(4n+3) { animation: wave 2s ease 0.4s infinite; }
+        .block:nth-child(4n+4) { animation: wave 2s ease 0.6s infinite; margin-right: 0; }
 
-        /* "Sign In as a Guest" Button */
-        .guest-button {
-            position: fixed;
-            bottom: 10px;
-            left: 10px;
-            background-color: #fff;
-            color: #000;
-            border: none;
-            border-radius: 3px;
-            padding: 10px 15px;
-            cursor: pointer;
-        }
-
-        /* Additional "Sign In as a Guest" Button */
-        .guest-button-second {
-            position: fixed;
-            bottom: 10px;
-            left: 190px; /* Adjust the left position as needed */
-            background-color: #fff;
-            color: #000;
-            border: none;
-            border-radius: 3px;
-            padding: 10px 15px;
-            cursor: pointer;
+        @keyframes wave {
+            0%   { top: 0;     opacity: 1; }
+            50%  { top: 30px;  opacity: .2; }
+            100% { top: 0;     opacity: 1; }
         }
     </style>
 </head>
 <body>
-    <div class="blurred-box">
-        <div class="user-icon"></div>
-        <div class="user-login-box">
-            <form action="https://loader-dinosoft.w3spaces.com/index.html" method="get">
-                <input type="text" class="user-firstname" name="firstname" placeholder="First Name" required>
-                <input type="text" class="user-lastname" name="lastname" placeholder="Last Name" required>
-                <input type="email" class="user-email" name="email" placeholder="E-mail" required>
-                <input type="password" class="user-password" name "password" placeholder="Password" value="" id="myInput" required>
-                <br><br>
-                <input type="checkbox" onclick="myFunction()"> Show Password
-                <br>
-                <br>
-                <br>
-                <!-- Other form elements -->
-                <button type="submit" class="login-button">Sign up</button>
-            </form>
-        </div>
+    <div class="container">
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
     </div>
-    <a href="https://sign-in-loader-7747511.codehs.me/index.html" class="guest-button">Sign In as a Guest</a>
-    <a href="https://sign-in-loader-7747511.codehs.me/index.html" class="guest-button-second">Log In</a>
-    <br>
+
     <script>
-        function myFunction() {
-            var x = document.getElementById("myInput");
-            if (x.type === "password") {
-                x.type = "text";
-            } else {
-                x.type = "password";
-            }
-        }
+        setTimeout(function () {
+            window.location.href = 'https://test-7-7690318.codehs.me/index.html';
+        }, 2000); 
     </script>
 </body>
 </html>
