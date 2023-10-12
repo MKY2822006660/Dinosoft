@@ -1,392 +1,175 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-  <link rel="icon" type="image/x-icon" href="https://www.linkpicture.com/q/icon_12.jpg">
-  
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
-
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.topnav a.active {
-  background-color: #04AA6D;
-  color: white;
-}
-</style>
-</head>
-<body>
-
-
-<div class="topnav">
-<center>
-    <!DOCTYPE html>
-<html lang="en">
-  <head>
+    <title>Password Form</title>
     <style>
-      * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  overflow: auto;
-}
-ul li {
-  position: relative;
-  margin: 0 20px;
-  list-style: none;
-  display: inline-block;
-  padding: 14px;
-  font-size: 17px;
-}
-ul li a{
-text-decoration: none; 
-cursor: pointer;
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
-}
-ul li a:hover {
+        html {
+            width: 100vw;
+            height: 100vh;
+        }
 
-}
+        body {
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: top;
+            background-image: url(https://th.bing.com/th/id/OIP.RlM10r9JQv4PHFlh5dLqpgHaEK?pid=ImgDet&rs=1);
+            width: 100%;
+            height: 100%;
+            font-family: Arial, Helvetica;
+            letter-spacing: 0.02em;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .blurred-box {
+            width: 370px; /* Adjusted width to be 50px wider */
+            height: 470px; /* Adjusted height to be 50px longer */
+            background: inherit;
+            border-radius: 2px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .blurred-box:after {
+            content: '';
+            width: 420px; /* Adjusted to match the new width of the .blurred-box */
+            height: 520px; /* Adjusted to match the new height of the .blurred-box */
+            position: absolute;
+            left: -25px;
+            top: -25px;
+            box-shadow: inset 0 0 0 200px rgba(255, 255, 255, 0.1);
+            filter: blur(15px);
+        }
+
+        .user-icon {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-size: cover;
+            background-image: url("https://i.ibb.co/YL40yZ3/download-3.jpg");
+            position: absolute;
+            top: 50px;
+            left: 130px;
+        }
+
+        .user-login-box {
+            text-align: center;
+            z-index: 1;
+            position: relative;
+            margin-top: 160px;
+        }
+
+        /* Additional styles for the first name and last name fields */
+        input.user-firstname,
+        input.user-lastname {
+            width: 100%;
+            height: 18px;
+            opacity: 0.4;
+            border-radius: 2px;
+            padding: 10px 15px;
+            border: 0;
+            margin-bottom: 10px;
+        }
+
+        input.user-email,
+        input.user-password {
+            width: 100%;
+            height: 18px;
+            opacity: 0.4;
+            border-radius: 2px;
+            padding: 10px 15px;
+            border: 0;
+            margin-bottom: 10px;
+        }
+
+        /* Show Password Button */
+        .show-password-button {
+            background-color: #fff;
+            color: #000;
+            border: none;
+            border-radius: 3px;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        /* "Log In" Button */
+        .login-button {
+            background-color: #fff;
+            color: #000;
+            border: none;
+            border-radius: 3px;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        /* "Sign In as a Guest" Button */
+        .guest-button {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            background-color: #fff;
+            color: #000;
+            border: none;
+            border-radius: 3px;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        /* Additional "Sign In as a Guest" Button */
+        .guest-button-second {
+            position: fixed;
+            bottom: 10px;
+            left: 190px; /* Adjust the left position as needed */
+            background-color: #fff;
+            color: #000;
+            border: none;
+            border-radius: 3px;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
     </style>
-  </head>
-  <body>
-    <nav>
-     <a href="https://log-in-official-7000368.codehs.me/index.html">   
-    <img src="https://www.linkpicture.com/q/icon_12.jpg" width="60px" height="40px" id=logo alt="Logo image"/>
-      <ul class="navigationbar">
-         </a>
-<center>
-  <a  href="https://about-the-developer-6346106.codehs.me/index.html">Developer information</a>
-  <a href="https://contact-us-6374967.codehs.me/index.html">Contact us</a>
-  <a href="https://about-1-6547351.codehs.me/index.html">About</a>
-  <a href="https://forms.gle/cNjn9rZhxz7j4DEt6">Feedback</a>
-  <a href="https://contact-us-6374967.codehs.me/index.html">Help Center</a>
-  <a href="https://copyright-6592211.codehs.me/index.html">© Copyright</a>
-    <a href="https://egypt-7039572.codehs.me/index.html">Country</a>
-    <a href="https://contact-us-6374967.codehs.me/index.html">Contact us</a>
-      <a href="https://log-in-official-7000368.codehs.me/index.html">Log in</a>
-      
-</center>
-  
-</div>
-
-
-<div style="padding-left:16px">
-
-</div>
-
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Sign up</title>
-<center>
-<body>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body, html {
-  height: 100%;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-
-  min-height: 380px;
-
-
-  background-position: auto;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-
-
-.container {
-<center>
-  position: absolute;
-  right: 0;
-  margin: 120px;
-  max-width: 300px;
-  padding: 16px;
-  background-color: white;
-  </center>
-}
-
-
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  border: none;
-  background: #f1f1f1;
-}
-
-input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-
-.btn {
-  background-color: #04AA6D;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  width: 50%;
-  opacity: 0.9;
-}
-
-.btn:hover {
-  opacity: 1;
-}
-</style>
 </head>
 <body>
-
-<h1>Tell us about you first, before you go</h1>
-<h2>Welcome.....</h2>
-<center><div class="bg-img">
-  <form action="/action_page.php" class="container">
-    <h1>Sign up</h1>
-
-    <label for="Name"><b>Name</b></label>
-    <input type="text" placeholder="First Name" name="Name" required>
-
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-
-<form action="/action_page.php">
-  <label for="birthday"><b>Birthday</b></label>
-  <br>
-  <br>
-  <input type="date" id="birthday" name="birthday">
-
-<br>
-<br>
-<br>
-
-<!DOCTYPE html>
-<html>
-<head>
-    <center>
-  <title>Human Verification</title>
-  <script>
-    function verifyCode() {
-      var userCode = document.getElementById("code").value;
-
-      
-      var correctCode = "37468";
-
-      if (userCode === correctCode) {
-        alert("Verification successful! You are a human.");
-      } else {
-        alert("Verification failed! Please try again.");
-      }
-    }
-  </script>
-</head>
-<body>
-    <form>
-
-  <p><b>Please enter the code below to verify that you are a human:</b></p>
-  
- <br>
- <br>
-  
-  <img src="https://i.ibb.co/k3XzKKq/37468-copy.png"  style="width:200px;height:60px;">
-  <br>
-  
-  <input type="text" id="code" placeholder="Enter the code" />
-  <input type="hidden" required>
-  <button onclick="verifyCode()"><h1>Verify</h1></button>
-  </form>
-  <h1><strong>Please verify the code first, then press sign up</strong></h1>
-</center>
+    <div class="blurred-box">
+        <div class="user-icon"></div>
+        <div class="user-login-box">
+            <form action="https://loader-dinosoft.w3spaces.com/index.html" method="get">
+                <input type="text" class="user-firstname" name="firstname" placeholder="First Name" required>
+                <input type="text" class="user-lastname" name="lastname" placeholder="Last Name" required>
+                <input type="email" class="user-email" name="email" placeholder="E-mail" required>
+                <input type="password" class="user-password" name "password" placeholder="Password" value="" id="myInput" required>
+                <br><br>
+                <input type="checkbox" onclick="myFunction()"> Show Password
+                <br>
+                <br>
+                <br>
+                <!-- Other form elements -->
+                <button type="submit" class="login-button">Sign up</button>
+            </form>
+        </div>
+    </div>
+    <a href="https://loader-dinosoft.w3spaces.com/index.html" class="guest-button">Sign In as a Guest</a>
+    <a href="https://loader-dinosoft.w3spaces.com/index.html" class="guest-button-second">Log In</a>
+    <br>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myInput");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+    </script>
 </body>
 </html>
-    
-<a href="https://the-loading-6334820.codehs.me/index.html"><h1>Sign up</h1></a>
-   
-   <sub><h3><b><p><strong>After you click the Sign up button, you will go to the loading page. When you are trying to log in next time please log in from the Sign up page, which it is this one.</strong></p></b></h3></sub>
-   
-
-  
-  
-  
-
-</style>
-</head>
-<body>
-
-
-
-</body>
-</html>
-
-  
-  
-  
-  
-
-                                          
-  </form></center>
-</center>  
-</div>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-body {
-  background-image: url('https://codehs.com/uploads/ce800296852ce6bc161239dfd2131832');
-  background-repeat: no-repeat;
-  background-attachment: fixed; 
-  background-size: 100% 100%;
-}
-
-<link rel="icon" type="image/x-icon" href="https://i.ibb.co/QFFYDnH/icon-12-1.jpg">
-
-
-</style>
-</head>
-<body>
-<center>
-<html>
-  
-<h3 style="color:green;">If you are signing up you can sign up then come back to this page and click log in, then you can log in.</h3>
-<h3 style="color:red;">By clicking sign up or Sign up, You agree to our<a href="https://codehs.com/uploads/caf4f6a0cde130348723d6dc0e79e890">Privacy & policies.</a></h3> 
-  
-</html>
-</center> 
-</body>
-</html>
-
-
-
-
-
-
-<link rel="icon" type="image/x-icon" href="https://www.linkpicture.com/q/icon_12.jpg">
-
-
-
-
-
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9685094228864092"
-     crossorigin="anonymous"></script>
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     <head>
-     
-     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D3RX76X8HS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-D3RX76X8HS');
-</script>
-</head>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyCb1ObhvmCsiZWrT_RD22Ti5Yba01T2hQQ",
-    authDomain: "dinosoft-399901.firebaseapp.com",
-    projectId: "dinosoft-399901",
-    storageBucket: "dinosoft-399901.appspot.com",
-    messagingSenderId: "930190032986",
-    appId: "1:930190032986:web:342aa0910237e352aa9863",
-    measurementId: "G-E4SC6GNY82"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-</script>
